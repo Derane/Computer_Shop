@@ -1,0 +1,2 @@
+# Computer_Shop
+In this shop your customer can buy a computer by his name (db in this task just hashmap with key = name of computer and value = computer) When the customer buy the computer then the computer change his status to READY_FOR_DELIVERY and the shop takes off him from the market. If customer will buy computer with a non-exist name he will receive computer not found exception. If a client buys a computer with a higher price than his money, he gets not enough money exception.
