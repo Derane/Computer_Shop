@@ -4,7 +4,7 @@ import computers.states.ComputerState;
 
 import java.math.BigDecimal;
 
-import static computers.states.ComputerState.*;
+import static computers.states.ComputerState.SELLING;
 
 public abstract class Computer {
 

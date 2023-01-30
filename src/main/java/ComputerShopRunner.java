@@ -8,14 +8,18 @@ import java.util.ArrayList;
 
 public class ComputerShopRunner {
 
-	private static final ComputerShopService computerShop = new ComputerShop();
+	private final ComputerShopService computerShop;
+
+	public ComputerShopRunner(ComputerShopService computerShop) {
+		this.computerShop = computerShop;
+	}
 
 	public static void main(String[] args) {
-
+		ComputerShopService computerShopService = new ComputerShop();
 		Payable customer = new Customer(new ArrayList<>(), BigDecimal.valueOf(100000));
 
-		computerShop.buyComputerByName(customer, "Lenovo Tab M10 HD (2nd Gen)");
-		computerShop.buyComputerByName(customer, "Asus X515EP-BQ656");
+		computerShopService.buyComputerByName(customer, "Lenovo Tab M10 HD (2nd Gen)");
+		computerShopService.buyComputerByName(customer, "Asus X515EP-BQ656");
 
 		System.out.println(customer);
 	}
