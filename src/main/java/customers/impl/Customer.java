@@ -9,12 +9,12 @@ import java.util.List;
 
 public class Customer implements Payable {
 
-	private final List<Computer> computers;
+	private final List<Computer> boughtComputers;
 
 	private BigDecimal money;
 
 	public Customer(List<Computer> computers, BigDecimal money) {
-		this.computers = computers;
+		this.boughtComputers = computers;
 		this.money = money;
 	}
 
@@ -23,7 +23,7 @@ public class Customer implements Payable {
 		BigDecimal price = computer.getPrice();
 
 		if (this.money.compareTo(price) >= 0) {
-			this.computers.add(computer);
+			this.boughtComputers.add(computer);
 			this.money = this.money.subtract(price);
 			return computer;
 		}
@@ -34,7 +34,7 @@ public class Customer implements Payable {
 	@Override
 	public String toString() {
 		return "Customer{" +
-				"computers=" + computers +
+				"computers=" + boughtComputers +
 				", money=" + money +
 				'}';
 	}
